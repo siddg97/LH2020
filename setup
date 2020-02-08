@@ -1,10 +1,16 @@
 #!/bin/bash
 
-# setup virtual env
-python3 -m venv venv
-
 # activate venv
 . venv/bin/activate
 
+# flask vars
+export FLASK_APP=server
+export FLASK_ENV=development
+export DOTENV='.env'
+
 # install flask dependencies
-pip install -r requirements.txt
+pip install -e .
+
+# run server
+flask run
+
