@@ -56,3 +56,12 @@ $ deactivate
 > ```bash
 > $ chmod 775 setup
 > ```
+
+### Start Flask API
+- Navigate to the root directory
+- Activate `venv` and install all dependencies. (Could simply run the `setup` script)
+- run the following command
+```bash
+$ python server/app.py
+```
+- Navigate to `http://localhost:5000/`
