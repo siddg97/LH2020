@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# setup virtual env
+python3 -m venv venv
+
+# activate venv
+. venv/bin/activate
+
+# install flask dependencies
+pip install -r requirements.txt

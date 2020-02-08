@@ -47,4 +47,12 @@ $ . venv/bin/activate
 ```bash
 $ deactivate
 ```
-
+> ### NOTE
+> Alternatively there is a bash script which will handle all the development enviornemt=ent setup and installing the dependecies for you. YOu can run this script in yout terminal like this 
+> ```bash
+> $ ./setup
+> ```
+> You might need to give the file permissions to be executable. That can be accomplished by using the `chmod` command on a `bash` terminal
+> ```bash
+> $ chmod 775 setup
+> ```
