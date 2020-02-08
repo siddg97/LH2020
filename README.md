@@ -22,7 +22,7 @@ The root directory of the project is `/LH2020`. The codebase will be set up in t
 
 ### Setup
 > It is best to create a virtual enviornment for development as it segrates our codebase dependencies from other projects that could be present on your development device. We will utilize `venv` for it. 
-> ### Make sure that you have `python3` installed.
+> #### Make sure that you have `python3` installed.
 
 To setup virtual enviornment do the following:
 1. Navigate to the top level directory of this repository. 
@@ -33,13 +33,10 @@ To setup virtual enviornment do the following:
 ```bash
 $ python3 -m venv venv
 ```
-3. Activate the virtual enviornment
+3. Activate the virtual enviornment. You should see `(venv)` on your terminal before the current working directory.
 ```bash
 $ . venv/bin/activate
 ```
-
-> You should see `(venv)` on your terminal before the current working directory.
-
 4. The project has a `requirements.txt` file which lists all the dependencies needed by the flask API. Run the following command (in the root directory with activation of `venv`) to install all dependencies.
 ```bash
 (venv) $ pip install -r requirements.txt
