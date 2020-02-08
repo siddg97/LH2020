@@ -9,6 +9,7 @@ from flask_bcrypt import Bcrypt
 from flask_mongoengine import MongoEngine
 
 from server._api.auth import Register, Login
+from server._api.answer import Answer
 
 from server._mongo.db import make_db
 
@@ -29,5 +30,6 @@ def create_app(test_config=None):
 
 	api.add_resource(Register,'/register')
 	api.add_resource(Login,'/login')
+	api.add_resource(Answer,'/answer')
 
 	return app
