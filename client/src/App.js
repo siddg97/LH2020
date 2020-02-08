@@ -1,9 +1,9 @@
 import React from 'react';
-import Login from './pages/Landing';
+import Landing from './pages/Landing';
 function App() {
   return (
     <div>
-      <Login/>
+      <Landing/>
     </div>
   );
 }
