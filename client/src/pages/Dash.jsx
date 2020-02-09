@@ -96,9 +96,9 @@ class Dash extends React.Component {
           </Grid.Column>
 
           <Grid.Column verticalAlign='center' width={8}>
-            <Segment inverted style={{minHeight:'100vh', borderRadius:0}}>
-              <Header as='h2' color='teal' textAlign='center'>
-                Result:
+            <Segment style={{minHeight:'100vh', borderRadius:0}}>
+              <Header as='h2' color textAlign='center'>
+                Summary:
               </Header>
               <Container textAlign='justified'>
               { result }
