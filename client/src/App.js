@@ -1,11 +1,14 @@
 import React from 'react';
-//import Login from './pages/Landing';
-import MainForm from './pages/Main';
+import Landing from './pages/Landing';
+import {Switch,Route} from 'react-router-dom';
+import Dash from './pages/Dash';
 
 function App() {
   return (
-      <MainForm/>
-
+    <Switch>
+      <Route exact path='/' component={Landing}/>
+      <Route exact path='/dash' component={Dash} />
+    </Switch>
   );
 }
 
