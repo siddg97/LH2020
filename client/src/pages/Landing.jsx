@@ -1,60 +1,38 @@
-import React from 'react'
-import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
+import React from 'react';
+import { Button, Grid, Segment } from 'semantic-ui-react'
+import Login from './Login';
+import Register from './Register';
 
-class Login extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      email:'',
-      password:'',
-      err:{},
-    }
-  }
-
-  handleChange = (e, {name,value}) => this.setState({ [name]:value })
-  handleLogin = () => console.log(this.state)
-
+class Landing extends React.Component {
+  state = { login: true };
   render(){
-    const { email, password, err } = this.state;
+    const segStyle = { minHeight:'100vh', padding:'25vh', borderRadius:0 };
     return (
-      <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as='h2' color='teal' textAlign='center'>
-            Log-in to your account
-          </Header>
-          <Form size='large'>
-            <Segment>
-              <Form.Input 
-                fluid 
-                name='email' 
-                value={email} 
-                icon='user' 
-                iconPosition='left' 
-                placeholder='E-mail address'
-                onChange={this.handleChange}
-              />
-              <Form.Input
-                fluid
-                name='password'
-                value={password}
-                icon='lock'
-                iconPosition='left'
-                placeholder='Password'
-                type='password'
-                onChange={this.handleChange}
-              />
-              <Button color='teal' fluid size='large' onClick={this.handleLogin}>
-                Login
-              </Button>
-            </Segment>
-          </Form>
-          <Message>
-            New to us? <a>Sign Up</a>
-          </Message>
-        </Grid.Column>
-      </Grid>
+      <Segment 
+        inverted 
+        textAlign='center' 
+        style={segStyle}
+      >
+        <Grid textAlign='center' verticalAlign='middle'>
+          <Grid.Column>
+          {
+            this.state.login ? <Login/> : <Register/>
+          }
+          {
+            this.state.login ? 'New user ?     ' : 'Already have an account ?     '
+          }
+          <Button 
+            inverted 
+            size='mini'
+            color={this.state.login ? 'red' : 'green'} 
+            onClick={() => this.setState({login: !this.state.login})} 
+            content={this.state.login ? 'Register' : 'Login'}
+          />
+          </Grid.Column>
+        </Grid>
+      </Segment>
     )
   }
 }
 
-export default Login
+export default Landing;
