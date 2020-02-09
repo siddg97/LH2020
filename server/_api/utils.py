@@ -1,4 +1,4 @@
-import PyPDF2
+# import PyPDF2
 import requests
 from bs4 import BeautifulSoup  # bs4 for html scraping
 from nltk.corpus import stopwords

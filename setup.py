@@ -15,6 +15,9 @@ setup(
         'flask-mongoengine',
         'flask-bcrypt',
         'python-dotenv',
-        'flask-jwt-extended'
+        'flask-jwt-extended',
+        'requests',
+        'beautifulsoup4',
+        'pypdf2'
     ],
 )
