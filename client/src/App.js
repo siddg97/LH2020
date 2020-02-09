@@ -1,10 +1,10 @@
 import React from 'react';
-import Login from './pages/Landing';
+//import Login from './pages/Landing';
+import MainForm from './pages/Main';
+
 function App() {
   return (
-    <div>
-      <Login/>
-    </div>
+      <MainForm/>
   );
 }
 
