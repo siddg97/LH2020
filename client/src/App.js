@@ -1,10 +1,14 @@
 import React from 'react';
 import Landing from './pages/Landing';
+import {Switch,Route} from 'react-router-dom';
+import Dash from './pages/Dash';
+
 function App() {
   return (
-    <div>
-      <Landing/>
-    </div>
+    <Switch>
+      <Route exact path='/' component={Landing}/>
+      <Route exact path='/dash' component={Dash} />
+    </Switch>
   );
 }
 
