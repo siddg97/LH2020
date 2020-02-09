@@ -10,6 +10,7 @@ from flask_mongoengine import MongoEngine
 
 from server._api.auth import Register, Login
 from server._api.answer import Answer
+from server._api.fetch import Url, Pdf
 
 from server._mongo.db import make_db
 
@@ -31,5 +32,7 @@ def create_app(test_config=None):
 	api.add_resource(Register,'/register')
 	api.add_resource(Login,'/login')
 	api.add_resource(Answer,'/answer')
+	api.add_resource(Url,'/url')
+	api.add_resource(Pdf,'/pdf')
 
 	return app
